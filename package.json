@@ -1,0 +1,19 @@
+{
+	"private": true,
+	"scripts": {
+		"build": "yarn workspaces run build",
+		"dev:frontend": "yarn workspace @my-project/frontend start:dev",
+		"dev:backend": "yarn workspace @my-project/backend start:dev"
+	},
+	"engines": {
+		"node": "^16.16.0"
+	},
+	"workspaces": {
+		"packages": [
+			"packages/*"
+		]
+	},
+	"devDependencies": {
+		"typescript": "^4.7.4"
+	}
+}
