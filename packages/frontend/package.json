@@ -5,7 +5,8 @@
 		"start:dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "eslint --cache --ext .ts,.tsx .",
+		"prepare": "cross-env-shell ../../scripts/yarn-prepare.sh"
 	},
 	"dependencies": {
 		"next": "12.2.3",

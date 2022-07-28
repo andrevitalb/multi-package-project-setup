@@ -5,7 +5,9 @@
 		"start:dev": "strapi develop",
 		"start": "strapi start",
 		"build": "strapi build",
-		"strapi": "strapi"
+		"strapi": "strapi",
+		"lint": "eslint --cache \"{src,apps,libs,test}/**/*.{ts,tsx}\"",
+		"prepare": "cross-env-shell ../../scripts/yarn-prepare.sh"
 	},
 	"dependencies": {
 		"@strapi/strapi": "4.3.0",
