@@ -3,7 +3,10 @@
 	"scripts": {
 		"build": "yarn workspaces run build",
 		"dev:frontend": "yarn workspace @my-project/frontend start:dev",
-		"dev:backend": "yarn workspace @my-project/backend start:dev"
+		"dev:backend": "yarn workspace @my-project/backend start:dev",
+		"prepare": "cross-env-shell scripts/yarn-prepare.sh",
+		"lint": "yarn workspaces run lint",
+		"fix": "yarn workspaces run lint --fix"
 	},
 	"engines": {
 		"node": "^16.16.0"
@@ -14,6 +17,23 @@
 		]
 	},
 	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.31.0",
+		"@typescript-eslint/parser": "^5.31.0",
+		"babel-eslint": "^10.1.0",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.20.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-config-react-app": "^7.0.1",
+		"eslint-plugin-flowtype": "^8.0.3",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jsx-a11y": "^6.6.1",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-promise": "^6.0.0",
+		"eslint-plugin-react": "^7.30.1",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"git-format-staged": "^3.0.0",
+		"husky": "^8.0.1",
+		"prettier": "^2.7.1",
 		"typescript": "^4.7.4"
 	}
 }
